@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khóa Học Ứng Dụng AI Đột Phá - Claude AI & LLMs | TECHEDU</title>
+  <meta name="description" content="Khóa học Ứng dụng AI Đột phá giúp làm chủ Claude AI, ChatGPT, Prompt Engineering và các mô hình LLMs để nhân 3 hiệu suất công việc. Học phí 4.000.000 VNĐ.">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Inline Fallback Styling */
+    body { background-color: #f2f2f2; color: #2d2d86; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .text-custom-primary { color: #2d2d86 !important; }
+    .bg-custom-primary { background-color: #2d2d86 !important; }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Header / Navbar (Kế thừa từ trang chủ) -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon">
+          <i class="bi bi-cpu-fill"></i>
+        </div>
+        <span>TIN HỌC TECHEDU</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="bi bi-house-door me-1"></i> Trang chủ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="ai-course.html">
+              <i class="bi bi-robot me-1"></i> Khóa học AI
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mos-ai.html">
+              <i class="bi bi-file-earmark-spreadsheet me-1"></i> Khóa học MOS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact-map">
+              <i class="bi bi-geo-alt me-1"></i> Liên hệ & Bản đồ
+            </a>
+          </li>
+        </ul>
+        <div class="d-flex gap-2">
+          <button class="btn btn-custom-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+            <i class="bi bi-pencil-square me-1"></i> Đăng Ký Khóa Học
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Banner: Tiêu đề "Ứng Dụng AI Đột Phá" với hình nền minh họa công nghệ -->
+  <header class="hero-banner-ai text-white position-relative">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html" class="text-light opacity-75">Trang chủ</a></li>
+              <li class="breadcrumb-item"><a href="#" class="text-light opacity-75">Khóa học chuyên sâu</a></li>
+              <li class="breadcrumb-item active text-warning fw-bold" aria-current="page">Ứng Dụng AI Đột Phá</li>
+            </ol>
+          </nav>
+          <span class="badge bg-danger mb-2 px-3 py-2 fs-6">Đào Tạo Đột Phá 2026</span>
+          <h1 class="display-4 fw-extrabold mb-3">Ứng Dụng AI Đột Phá</h1>
+          <p class="lead opacity-90 mb-4">
+            Làm chủ các mô hình trí tuệ nhân tạo thế hệ mới (Claude AI, ChatGPT, Midjourney, LLMs). Tự động hóa quy trình làm việc, sáng tạo nội dung và tăng gấp 3 lần năng suất cá nhân.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <button class="btn btn-accent-gold btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">
+              <i class="bi bi-lightning-charge-fill me-2"></i> Đăng Ký Học Ngay
+            </button>
+            <a href="#course-details" class="btn btn-outline-light btn-lg rounded-pill px-4">
+              <i class="bi bi-info-circle me-2"></i> Xem Nội Dung Chi Tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Layout chia 2 cột (Main / Sidebar) -->
+  <main class="py-5" id="course-details">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- CỘT TRÁI (Nội Dung Chính) -->
+        <div class="col-lg-8">
+          
+          <!-- Hộp Thông Tin Học Phí & Thời Gian Học (Rất Nổi Bật) -->
+          <div class="tuition-box mb-4">
+            <div class="row align-items-center">
+              <div class="col-md-7 mb-3 mb-md-0">
+                <span class="badge bg-primary mb-2">Thông Tin Khóa Học</span>
+                <h4 class="fw-bold text-custom-primary mb-1">Học Phí & Lịch Khai Giảng</h4>
+                <p class="text-muted small mb-0">Học trực tiếp tại trung tâm hoặc Online tương tác qua Zoom.</p>
+              </div>
+              <div class="col-md-5 text-md-end border-start-md ps-md-4">
+                <div class="small text-uppercase text-muted fw-bold">Học Phí Trọn Gói</div>
+                <div class="price-tag mb-1">4.000.000 VNĐ</div>
+                <span class="badge bg-success"><i class="bi bi-tag-fill me-1"></i> Tặng bộ Prompt bản quyền</span>
+              </div>
+            </div>
+
+            <hr class="my-3">
+
+            <div class="row g-3 small">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2 text-custom-primary fw-semibold">
+                  <i class="bi bi-calendar-week-fill text-primary fs-5"></i>
+                  <span><strong>Thời gian:</strong> 6 buổi (3 tuần)</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2 text-custom-primary fw-semibold">
+                  <i class="bi bi-clock-fill text-warning fs-5"></i>
+                  <span><strong>Giờ học:</strong> Thứ 7 & Chủ Nhật (13:30 - 16:30)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Giới Thiệu Chi Tiết Khóa Học AI -->
+          <div class="card card-custom p-4 mb-4">
+            <h3 class="fw-bold text-custom-primary mb-3">
+              <i class="bi bi-stars text-warning me-2"></i> Giới Thiệu Khóa Học Ứng Dụng AI
+            </h3>
+            <p>
+              Trong thế giới công nghệ hiện đại, Trí tuệ Nhân tạo (AI) không còn là công cụ tương lai mà đã trở thành trợ lý không thể thiếu cho bất kỳ cá nhân hay doanh nghiệp nào. Khóa học <strong>"Ứng Dụng AI Đột Phá"</strong> tại Trung tâm Tin học TECHEDU được thiết kế đặc biệt nhằm giúp học viên tiếp cận và thực hành chuyên sâu các công nghệ AI hàng đầu thế giới hiện nay như <strong>Claude AI, ChatGPT (OpenAI), các mô hình ngôn ngữ lớn (LLMs), Midjourney và AI Automation Agents</strong>.
+            </p>
+            <p>
+              Khóa học tập trung 80% thời lượng vào thực hành dự án thực tế, hướng dẫn bạn cách xây dựng quy trình làm việc thông minh, tối ưu hóa viết code, phân tích dữ liệu kinh doanh và tự động hóa các tác vụ lặp đi lặp lại hàng ngày.
+            </p>
+
+            <h4 class="fw-bold text-custom-primary mt-4 mb-3">
+              <i class="bi bi-trophy-fill text-success me-2"></i> Bạn Sẽ Đạt Được Gì Sau Khóa Học?
+            </h4>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-3 border rounded-3 bg-light h-100">
+                  <h6 class="fw-bold text-primary"><i class="bi bi-check-lg me-1"></i> Làm chủ Claude AI & LLMs</h6>
+                  <p class="small text-muted mb-0">Hiểu rõ nguyên lý hoạt động của các mô hình LLMs và kỹ thuật Prompt Engineering chuyên nghiệp.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 border rounded-3 bg-light h-100">
+                  <h6 class="fw-bold text-primary"><i class="bi bi-check-lg me-1"></i> Nhân 3 Tốc Độ Làm Việc</h6>
+                  <p class="small text-muted mb-0">Tự động hóa báo cáo, viết tài liệu, tạo slide thuyết trình và lập trình tự động với sự trợ giúp của AI.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 border rounded-3 bg-light h-100">
+                  <h6 class="fw-bold text-primary"><i class="bi bi-check-lg me-1"></i> Thiết Kế AI Agents Cá Nhân</h6>
+                  <p class="small text-muted mb-0">Tự tạo ra các AI bot chuyên biệt phục vụ công việc chăm sóc khách hàng, phân tích số liệu.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 border rounded-3 bg-light h-100">
+                  <h6 class="fw-bold text-primary"><i class="bi bi-check-lg me-1"></i> Sáng Tạo Hình Ảnh & Video AI</h6>
+                  <p class="small text-muted mb-0">Ứng dụng Midjourney, DALL-E và Runway để tạo thiết kế đồ họa & video truyền thông đỉnh cao.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lộ Trình Chi Tiết 6 Buổi Học -->
+          <div class="card card-custom p-4 mb-4">
+            <h3 class="fw-bold text-custom-primary mb-3">
+              <i class="bi bi-journal-bookmark-fill text-primary me-2"></i> Lộ Trình Đào Tạo Chi Tiết (6 Buổi)
+            </h3>
+            
+            <div class="accordion accordion-custom" id="syllabusAccordion">
+              
+              <!-- Buổi 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Buổi 1: Tổng Quan AI & Nghệ Thuật Prompt Engineering (13:30 - 16:30 T7)
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#syllabusAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Tổng quan về hệ sinh thái Generative AI, LLMs và xu hướng phát triển 2026.</li>
+                      <li>Khai phá công sức của Claude AI (Anthropic) & ChatGPT (OpenAI).</li>
+                      <li>Công thức thiết kế câu lệnh chuẩn (Prompt Engineering Framework: Role, Context, Task, Constraint).</li>
+                      <li>Thực hành: Viết prompt tạo văn bản, email, báo cáo kinh doanh chuyên nghiệp.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buổi 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Buổi 2: Làm Chủ Claude AI & Phân Tích Dữ Liệu Chuyên Sâu (13:30 - 16:30 CN)
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#syllabusAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Kỹ năng tải dữ liệu, tóm tắt tài liệu PDF/Excel hàng trăm trang với Claude AI.</li>
+                      <li>Sử dụng Claude AI để suy luận logic, phát hiện lỗi sai trong hợp đồng & báo cáo tài chính.</li>
+                      <li>Xây dựng biểu đồ & phân tích xu hướng kinh doanh bằng AI.</li>
+                      <li>Thực hành: Đưa file dữ liệu thô và yêu cầu AI tự lập dashboard tổng hợp.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buổi 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Buổi 3: Lập Trình & Tự Động Hóa Code Với Trợ Lý AI (13:30 - 16:30 T7)
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#syllabusAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Ứng dụng AI vào viết code Python, JavaScript, HTML/CSS và SQL.</li>
+                      <li>Sử dụng AI để Debug lỗi, tối ưu hóa thuật toán và viết Unit Test tự động.</li>
+                      <li>Tự tạo website tĩnh và kịch bản ứng dụng chỉ bằng câu lệnh tự nhiên.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buổi 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Buổi 4: Đồ Họa & Truyền Thông Bằng AI (13:30 - 16:30 CN)
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#syllabusAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Tạo ảnh nghệ thuật & banner quảng cáo ấn tượng với Midjourney & DALL-E 3.</li>
+                      <li>Thiết kế logo, infographic và banner truyền thông thương hiệu.</li>
+                      <li>Tạo clip truyền thông ngắn tự động bằng Runway & Pika AI.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buổi 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Buổi 5: Xây Dựng AI Agents & Custom GPTs (13:30 - 16:30 T7)
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#syllabusAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Khái niệm AI Agent & Trợ lý ảo đa tác vụ.</li>
+                      <li>Cấu hình Custom Project trong Claude AI và Custom GPTs trong ChatGPT.</li>
+                      <li>Kết nối AI với Google Sheets, Gmail và Zapier để tự động gửi email & đặt lịch.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buổi 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Buổi 6: Đồ Án Tốt Nghiệp & Tối Ưu Quy Trình Công Việc (13:30 - 16:30 CN)
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#syllabusAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Thực hành đồ án tốt nghiệp: Xây dựng quy trình làm việc tự động cá nhân.</li>
+                      <li>Giảng viên nhận xét, đánh giá và tối ưu sản phẩm của từng học viên.</li>
+                      <li>Cấp chứng nhận hoàn thành khóa học Ứng Dụng AI Đột Phá.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Nút Đăng Ký Trực Tiếp -->
+          <div class="text-center p-4 bg-white rounded-4 shadow-sm border">
+            <h4 class="fw-bold text-custom-primary mb-2">Bạn Đã Sẵn Sàng Nhân 3 Năng Suất Với AI?</h4>
+            <p class="text-muted small mb-3">Số lượng học viên mỗi lớp giới hạn 15 người để đảm bảo chất lượng tương tác 1-1.</p>
+            <button class="btn btn-custom-primary btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">
+              <i class="bi bi-pencil-square me-2"></i> Giữ Chỗ Ngay Bây Giờ (4.000.000 VNĐ)
+            </button>
+          </div>
+
+        </div>
+
+        <!-- CỘT PHẢI (Widget) -->
+        <div class="col-lg-4">
+
+          <!-- WIDGET 1: Đăng ký nhanh -->
+          <div class="sidebar-widget">
+            <h5 class="widget-title">
+              <i class="bi bi-lightning-fill text-warning"></i> Đăng Ký Tư Vấn Nhanh
+            </h5>
+            <form onsubmit="handleFormSubmit(event)">
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Họ và tên của bạn *" required>
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control" placeholder="Số điện thoại / Zalo *" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Địa chỉ Email">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="2" placeholder="Ghi chú thêm (nếu có)"></textarea>
+              </div>
+              <button type="submit" class="btn btn-custom-primary w-100 fw-bold">
+                <i class="bi bi-send-fill me-1"></i> Gửi Đăng Ký
+              </button>
+            </form>
+          </div>
+
+          <!-- WIDGET 2: Chứa các nút liên kết Mạng xã hội (Facebook, YouTube, TikTok...) -->
+          <div class="sidebar-widget">
+            <h5 class="widget-title">
+              <i class="bi bi-share-fill text-primary"></i> Kết Nối Mạng Xã Hội
+            </h5>
+            <p class="small text-muted mb-3">Theo dõi kênh truyền thông của Trung tâm TECHEDU để cập nhật bài viết chia sẻ về Prompt AI & thủ thuật công nghệ miễn phí mỗi ngày!</p>
+            
+            <div class="d-flex flex-column gap-2">
+              <a href="https://facebook.com" target="_blank" class="social-link-btn social-btn-facebook">
+                <i class="bi bi-facebook fs-4"></i>
+                <span>Theo dõi Fanpage Facebook</span>
+              </a>
+              <a href="https://youtube.com" target="_blank" class="social-link-btn social-btn-youtube">
+                <i class="bi bi-youtube fs-4"></i>
+                <span>Kênh YouTube Học AI</span>
+              </a>
+              <a href="https://tiktok.com" target="_blank" class="social-link-btn social-btn-tiktok">
+                <i class="bi bi-tiktok fs-4"></i>
+                <span>Kênh TikTok Mẹo AI 60s</span>
+              </a>
+              <a href="https://zalo.me/0383857888" target="_blank" class="social-link-btn social-btn-zalo">
+                <i class="bi bi-chat-dots-fill fs-4"></i>
+                <span>Kênh Zalo Hỗ Trợ 24/7</span>
+              </a>
+              <a href="tel:0383857888" class="social-link-btn social-btn-phone">
+                <i class="bi bi-telephone-outbound-fill fs-4"></i>
+                <span>Hotline: 0383857888</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- WIDGET 3: Quyền lợi khóa học -->
+          <div class="sidebar-widget bg-light">
+            <h5 class="widget-title">
+              <i class="bi bi-patch-check-fill text-success"></i> Quyền Lợi Học Viên
+            </h5>
+            <ul class="list-unstyled small mb-0 text-custom-muted">
+              <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Tặng kho 500+ Prompt AI độc quyền</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Cấp tài khoản Claude AI Pro trải nghiệm</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Hỗ trợ giải đáp thắc mắc trọn đời</li>
+              <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Xem lại video ghi hình sau mỗi buổi</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 4. Footer (Kế thừa từ trang chủ) -->
+  <footer class="footer-custom" id="contact">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <!-- Cột 1: Thông tin Trung tâm -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="brand-icon">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <span class="footer-brand">TIN HỌC TECHEDU</span>
+          </div>
+          <p class="small opacity-75 mb-3">
+            Trung tâm đào tạo tin học ứng dụng và công nghệ hàng đầu. Chuyên đào tạo luyện thi chứng chỉ MOS quốc tế, Lập trình Java thực chiến và Ứng dụng AI đột phá giúp nâng cao hiệu suất công việc.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com" target="_blank" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank" class="btn btn-sm btn-outline-light rounded-circle" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://tiktok.com" target="_blank" class="btn btn-sm btn-outline-light rounded-circle" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://zalo.me/0383857888" target="_blank" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Zalo"><i class="bi bi-chat-dots-fill"></i></a>
+          </div>
+        </div>
+
+        <!-- Cột 2: Các Khóa Học -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Khóa Học Đào Tạo</h5>
+          <ul class="footer-links">
+            <li><a href="ai-course.html"><i class="bi bi-chevron-right me-1"></i> Khóa học Ứng dụng AI</a></li>
+            <li><a href="mos-ai.html"><i class="bi bi-chevron-right me-1"></i> Khóa học Luyện thi MOS Word</a></li>
+            <li><a href="mos-ai.html"><i class="bi bi-chevron-right me-1"></i> Khóa học MOS Excel nâng cao</a></li>
+            <li><a href="mos-ai.html"><i class="bi bi-chevron-right me-1"></i> Combo MOS 3 Môn Quốc Tế</a></li>
+            <li><a href="index.html#featured-courses"><i class="bi bi-chevron-right me-1"></i> Lập trình Java Web Thực Chiến</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Thông Tin Liên Hệ -->
+        <div class="col-lg-5 col-md-12">
+          <h5 class="footer-title">Thông Tin Liên Hệ</h5>
+          <ul class="list-unstyled small opacity-90">
+            <li class="mb-3 d-flex align-items-start gap-2">
+              <i class="bi bi-geo-alt-fill text-warning fs-5"></i>
+              <span><strong>Địa chỉ:</strong> 34 Hoàng Việt, Phường Tân Sơn Nhất, TP. Hồ Chí Minh.</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-telephone-fill text-success fs-5"></i>
+              <span><strong>Hotline / Zalo:</strong> <a href="tel:0383857888" class="text-white text-decoration-underline">0383857888</a></span>
+            </li>
+            <li class="mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-envelope-fill text-info fs-5"></i>
+              <span><strong>Email:</strong> <a href="mailto:tuyensinh@finviet.com.vn" class="text-white text-decoration-underline">tuyensinh@finviet.com.vn</a></span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-clock-fill text-danger fs-5"></i>
+              <span><strong>Giờ làm việc:</strong> Thứ 2 - Chủ Nhật (08:00 - 21:00)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright -->
+      <div class="footer-bottom text-center">
+        <p class="mb-0 opacity-75">&copy; 2026 Trung Tâm Tin Học TECHEDU. All Rights Reserved. Thiết kế giao diện cao cấp cho học viên tin học.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Registration Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+        <div class="modal-header bg-custom-primary text-white border-0" style="border-radius: 16px 16px 0 0;">
+          <h5 class="modal-header-title mb-0 fw-bold" id="registerModalLabel">
+            <i class="bi bi-robot me-2"></i> Đăng Ký Khóa Học AI (4.000.000 VNĐ)
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="small text-muted mb-3">Lịch học: 6 buổi (Thứ 7 & Chủ Nhật, 13:30 - 16:30). Nhập thông tin để nhận xác nhận giữ chỗ!</p>
+          <form onsubmit="handleFormSubmit(event, 'registerModal')">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Họ và tên học viên *</label>
+              <input type="text" class="form-control" placeholder="Nguyễn Văn A" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Số điện thoại / Zalo *</label>
+              <input type="tel" class="form-control" placeholder="0383857888" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Email nhận tài liệu AI</label>
+              <input type="email" class="form-control" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Hình thức học</label>
+              <select class="form-select">
+                <option value="offline">Học trực tiếp tại Trung tâm (34 Hoàng Việt, TP.HCM)</option>
+                <option value="online">Học Online tương tác trực tiếp qua Zoom</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-custom-primary w-100 fw-bold py-2">
+              <i class="bi bi-check-circle-fill me-1"></i> XÁC NHẬN ĐĂNG KÝ AI
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+    <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="bi bi-check-circle-fill me-2"></i> Đăng ký thành công! Tư vấn viên sẽ liên hệ với bạn trong thời gian sớm nhất.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function handleFormSubmit(event, modalId = null) {
+      event.preventDefault();
+      if (modalId) {
+        const modalEl = document.getElementById(modalId);
+        const modalInstance = bootstrap.Modal.getInstance(modalEl);
+        if (modalInstance) modalInstance.hide();
+      }
+      const toastEl = document.getElementById('successToast');
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>

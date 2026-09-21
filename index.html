@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trung Tâm Đào Tạo Tin Học - MOS, Java & Ứng Dụng AI</title>
+  <meta name="description" content="Trung tâm đào tạo tin học uy tín chuyên đào tạo chứng chỉ MOS, Lập trình Java thực chiến và Ứng dụng AI đột phá giúp nâng cao hiệu suất làm việc.">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Inline Fallback Styling */
+    body { background-color: #f2f2f2; color: #2d2d86; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .text-custom-primary { color: #2d2d86 !important; }
+    .bg-custom-primary { background-color: #2d2d86 !important; }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Header / Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon">
+          <i class="bi bi-cpu-fill"></i>
+        </div>
+        <span>TIN HỌC TECHEDU</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">
+              <i class="bi bi-house-door me-1"></i> Trang chủ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ai-course.html">
+              <i class="bi bi-robot me-1"></i> Khóa học AI
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mos-ai.html">
+              <i class="bi bi-file-earmark-spreadsheet me-1"></i> Khóa học MOS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-map">
+              <i class="bi bi-geo-alt me-1"></i> Liên hệ & Bản đồ
+            </a>
+          </li>
+        </ul>
+        <div class="d-flex gap-2">
+          <button class="btn btn-custom-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+            <i class="bi bi-pencil-square me-1"></i> Đăng Ký Nhận Tư Vấn
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Hero Section -->
+  <section class="hero-banner">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <div class="badge-soft mb-3 text-white bg-opacity-20 bg-white border border-light">
+            <i class="bi bi-stars text-warning"></i> Chuyên Đào Tạo Tin Học & Công Nghệ Hàng Đầu 2026
+          </div>
+          <h1 class="display-4 fw-extrabold text-white mb-4">
+            Bứt Phá Sự Nghiệp Số — Làm Chủ <span class="text-warning">AI, MOS</span> & <span class="text-info">Java</span> Thực Chiến!
+          </h1>
+          <p class="lead text-light opacity-90 mb-4 me-lg-4">
+            Sứ mệnh của Trung tâm Tin học TECHEDU là trang bị kỹ năng tin học ứng dụng thực tế và tư duy công nghệ đột phá. Giúp học viên làm chủ trí tuệ nhân tạo (Claude AI, LLMs), chinh phục chứng chỉ tin học văn phòng quốc tế MOS và nâng tầm sự nghiệp lập trình viên chuyên nghiệp.
+          </p>
+          
+          <div class="d-flex flex-wrap gap-3 mb-5">
+            <!-- 1 nút Call to Action (CTA) nổi bật -->
+            <a href="#featured-courses" class="btn btn-accent-gold btn-lg">
+              <i class="bi bi-rocket-takeoff-fill me-2"></i> Khám Phá Khóa Học Ngay
+            </a>
+            <button class="btn btn-outline-light btn-lg rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#registerModal">
+              <i class="bi bi-telephone-fill me-2"></i> Tư Vấn Lộ Trình 1-1
+            </button>
+          </div>
+
+          <!-- Highlight Badges -->
+          <div class="row g-3 text-center text-lg-start">
+            <div class="col-4">
+              <h3 class="fw-bold text-warning mb-0">10,000+</h3>
+              <small class="text-light opacity-75">Học viên tốt nghiệp</small>
+            </div>
+            <div class="col-4">
+              <h3 class="fw-bold text-info mb-0">100%</h3>
+              <small class="text-light opacity-75">Cam kết đạt đầu ra</small>
+            </div>
+            <div class="col-4">
+              <h3 class="fw-bold text-success mb-0">4.9/5 ★</h3>
+              <small class="text-light opacity-75">Đánh giá hài lòng</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card card-custom p-3 bg-white text-dark shadow-lg">
+            <img src="images/ai-banner.jpg" class="card-img-top rounded-4 mb-3" alt="TechEdu AI & Training" style="max-height: 250px; object-fit: cover;">
+            <div class="card-body p-2">
+              <span class="badge bg-primary mb-2">Ưu Đãi Tuyển Sinh Tháng 9</span>
+              <h5 class="fw-bold text-custom-primary">Nhận Học Bổng Giảm 20% Học Phí</h5>
+              <p class="small text-muted mb-3">Đăng ký giữ chỗ ngay hôm nay để nhận trọn bộ tài liệu ôn thi MOS & Tài khoản AI Premium dùng thử 6 tháng.</p>
+              <form id="heroQuickForm" onsubmit="handleFormSubmit(event)">
+                <div class="mb-2">
+                  <input type="text" class="form-control" placeholder="Họ và tên học viên *" required>
+                </div>
+                <div class="mb-2">
+                  <input type="tel" class="form-control" placeholder="Số điện thoại Zalo *" required>
+                </div>
+                <div class="mb-3">
+                  <select class="form-select" required>
+                    <option value="" selected disabled>-- Chọn khóa học quan tâm --</option>
+                    <option value="ai">Ứng Dụng AI Đột Phá (Claude AI, LLMs)</option>
+                    <option value="mos">Khóa Học Luyện Thi MOS (Word, Excel, PowerPoint)</option>
+                    <option value="java">Lập Trình Java Thực Chiến</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-custom-primary w-100 fw-bold">
+                  <i class="bi bi-send-fill me-1"></i> Đăng Ký Ngay
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Features Section: 3 Thẻ trình bày 3 tính năng/khóa học nổi bật nhất -->
+  <section class="py-5" id="featured-courses">
+    <div class="container py-4">
+      <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+        <span class="badge-soft mb-2">Chương Trình Đào Tạo Trọng Tâm</span>
+        <h2 class="display-6 fw-bold text-custom-primary">Khóa Học Nổi Bật Nhất Tại Trung Tâm</h2>
+        <p class="text-custom-muted">Được thiết kế chuẩn hóa theo nhu cầu thực tế của doanh nghiệp, giúp bạn nâng cao kỹ năng nhanh chóng chỉ sau 6 buổi học.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- CARD 1: Khóa học MOS -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-custom h-100 position-relative">
+            <span class="card-badge bg-primary">Hot Combo</span>
+            <div class="card-img-wrapper">
+              <img src="images/mos-banner.jpg" alt="Khóa học MOS Word Excel PowerPoint">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="feature-icon-box">
+                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+              </div>
+              <h4 class="fw-bold text-custom-primary mb-2">Khóa Học Luyện Thi MOS</h4>
+              <p class="text-custom-muted small mb-3">
+                Thành thạo công cụ văn phòng chuẩn quốc tế Microsoft Word, Excel & PowerPoint. Đảm bảo thi đậu chứng chỉ MOS 100%.
+              </p>
+
+              <ul class="list-unstyled text-custom-muted small mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Luyện thi sát đề thi thật GMetrix</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Combo 2 môn: <strong>1.000.000 VNĐ</strong></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Combo 3 môn: <strong>1.500.000 VNĐ</strong></li>
+                <li class="mb-2"><i class="bi bi-clock-fill text-primary me-2"></i> 6 buổi (T7 & CN, 13:30 - 16:30)</li>
+              </ul>
+
+              <div class="pt-3 border-top d-flex align-items-center justify-content-between">
+                <div>
+                  <small class="text-muted d-block">Học phí chỉ từ</small>
+                  <span class="fw-extrabold fs-5 text-custom-primary">1.000.000đ</span>
+                </div>
+                <a href="mos-ai.html" class="btn btn-custom-outline btn-sm">
+                  Chi Tiết <i class="bi bi-arrow-right me-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: Khóa học Java -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-custom h-100 position-relative">
+            <span class="card-badge bg-dark">Thực Chiến</span>
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Khóa học Lập trình Java">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="feature-icon-box" style="background-color: #fef3c7; color: #d97706;">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h4 class="fw-bold text-custom-primary mb-2">Lập Trình Java Thực Chiến</h4>
+              <p class="text-custom-muted small mb-3">
+                Xây dựng nền tảng tư duy lập trình hướng đối tượng (OOP), cấu trúc dữ liệu và phát triển ứng dụng Java Web/Enterprise với Spring Boot.
+              </p>
+
+              <ul class="list-unstyled text-custom-muted small mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Tư duy OOP & Xử lý thuật toán bài bản</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Thực hành dự án quản lý thực tế</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Học phí: <strong>3.500.000 VNĐ</strong></li>
+                <li class="mb-2"><i class="bi bi-clock-fill text-primary me-2"></i> 10 buổi (Tối Thứ 2-4-6, 18:30 - 21:00)</li>
+              </ul>
+
+              <div class="pt-3 border-top d-flex align-items-center justify-content-between">
+                <div>
+                  <small class="text-muted d-block">Học phí trọn gói</small>
+                  <span class="fw-extrabold fs-5 text-custom-primary">3.500.000đ</span>
+                </div>
+                <button class="btn btn-custom-outline btn-sm" data-bs-toggle="modal" data-bs-target="#registerModal">
+                  Đăng Ký <i class="bi bi-arrow-right me-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: Khóa học AI -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-custom h-100 position-relative border-primary" style="border-width: 2px;">
+            <span class="card-badge bg-danger">Khuyên Dùng</span>
+            <div class="card-img-wrapper">
+              <img src="images/ai-banner.jpg" alt="Khóa học Ứng dụng AI">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="feature-icon-box" style="background-color: #e0f2fe; color: #0284c7;">
+                <i class="bi bi-cpu"></i>
+              </div>
+              <h4 class="fw-bold text-custom-primary mb-2">Ứng Dụng AI Đột Phá</h4>
+              <p class="text-custom-muted small mb-3">
+                Làm chủ Claude AI, ChatGPT & các mô hình LLMs. Tự động hóa 80% công việc lập trình, xử lý dữ liệu và sáng tạo nội dung.
+              </p>
+
+              <ul class="list-unstyled text-custom-muted small mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Sáng tạo Prompt chuyên sâu & AI Agent</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Học phí: <strong>4.000.000 VNĐ</strong></li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Tự động hóa quy trình làm việc</li>
+                <li class="mb-2"><i class="bi bi-clock-fill text-primary me-2"></i> 6 buổi (T7 & CN, 13:30 - 16:30)</li>
+              </ul>
+
+              <div class="pt-3 border-top d-flex align-items-center justify-content-between">
+                <div>
+                  <small class="text-muted d-block">Học phí trọn gói</small>
+                  <span class="fw-extrabold fs-5 text-custom-primary">4.000.000đ</span>
+                </div>
+                <a href="ai-course.html" class="btn btn-custom-primary btn-sm">
+                  Chi Tiết <i class="bi bi-arrow-right me-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER: 10 Đánh giá của khách hàng (Testimonials Carousel) -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="text-center mx-auto mb-5" style="max-width: 750px;">
+        <span class="badge-soft mb-2"><i class="bi bi-chat-quote-fill text-warning me-1"></i> Đánh Giá Từ Học Viên</span>
+        <h2 class="display-6 fw-bold text-custom-primary">10 Đánh Giá Của Khách Hàng</h2>
+        <p class="text-custom-muted">Cảm nhận thực tế từ học viên đã tham gia các khóa học tại Trung tâm Tin học TECHEDU.</p>
+      </div>
+
+      <!-- Carousel Bootstrap 5 Slider -->
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        
+        <!-- Indicators -->
+        <div class="carousel-indicators mb-n4">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+        </div>
+
+        <div class="carousel-inner pb-5">
+
+          <!-- Đánh giá 1 -->
+          <div class="carousel-item active">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80" alt="Nguyễn Minh Anh" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Các chương trình học tại trung tâm cực kỳ chất lượng, nội dung sát thực tế công việc. Giáo viên tận tâm hướng dẫn từng thao tác nhỏ, cơ sở vật chất quá tốt với máy lạnh và máy tính cấu hình cao. Mình đã thi đạt 980 điểm MOS Excel ngay lần thi đầu tiên!"
+              </p>
+              <h5 class="testimonial-author">Nguyễn Minh Anh</h5>
+              <div class="testimonial-course">Học viên Khóa MOS Combo 3 Môn Quốc Tế</div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 2 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80" alt="Trần Hoàng Nam" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Khóa học AI tại trung tâm quá tuyệt vời! Nội dung chất lượng sát thực tế giúp mình tăng gấp 3 lần hiệu suất xử lý báo cáo. Giáo viên tận tâm giải đáp ngoài giờ học, cơ sở vật chất quá tốt giúp trải nghiệm học vô cùng thoải mái."
+              </p>
+              <h5 class="testimonial-author">Trần Hoàng Nam</h5>
+              <div class="testimonial-course">Học viên Khóa Ứng Dụng AI Đột Phá</div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 3 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80" alt="Lê Thị Khánh Vy" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Rất ấn tượng với giáo viên tận tâm tại trung tâm, luôn sẵn sàng hỗ trợ bài tập tận tình. Các chương trình học tại trung tâm có nội dung chất lượng sát thực tế doanh nghiệp, cơ sở vật chất quá tốt đáp ứng đầy đủ thiết bị."
+              </p>
+              <h5 class="testimonial-author">Lê Thị Khánh Vy</h5>
+              <div class="testimonial-course">Học viên Khóa Lập Trình Java Thực Chiến</div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 4 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80" alt="Phạm Đức Anh" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Trung tâm đào tạo xuất sắc! Các chương trình học tại trung tâm thiết kế bài bản, nội dung chất lượng sát thực tế văn phòng. Đội ngũ giáo viên tận tâm, cơ sở vật chất quá tốt khang trang và hiện đại."
+              </p>
+              <h5 class="testimonial-author">Phạm Đức Anh</h5>
+              <div class="testimonial-course">Học viên Khóa MOS Word & Excel</div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 5 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80" alt="Đặng Quỳnh Trang" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Khóa học AI giúp mình thay đổi tư duy làm việc hoàn toàn. Các chương trình học tại trung tâm chuẩn hóa, nội dung chất lượng sát thực tế, giáo viên tận tâm đồng hành và cơ sở vật chất quá tốt vượt ngoài mong đợi!"
+              </p>
+              <h5 class="testimonial-author">Đặng Quỳnh Trang</h5>
+              <div class="testimonial-course">Học viên Khóa AI Automation</div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 6 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&h=200&q=80" alt="Vũ Minh Tuấn" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Mình đã thi đậu cả 3 môn MOS với điểm số tuyệt đối. Các chương trình học tại trung tâm thiết kế rất hay, nội dung chất lượng sát thực tế đề thi GMetrix. Giáo viên tận tâm chỉ bảo và cơ sở vật chất quá tốt!"
+              </p>
+              <h5 class="testimonial-author">Vũ Minh Tuấn</h5>
+              <div class="testimonial-course">Học viên Luyện Thi MOS Chuẩn Quốc Tế</div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 7 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&h=200&q=80" alt="Ngô Thu Thảo" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Học phí vô cùng hợp lý so với chất lượng. Các chương trình học tại trung tâm được cập nhật liên tục, nội dung chất lượng sát thực tế, giáo viên tận tâm giải đáp mọi thắc mắc và cơ sở vật chất quá tốt!"
+              </p>
+              <h5 class="testimonial-author">Ngô Thu Thảo</h5>
+              <div class="testimonial-course">Học viên Khóa Ứng Dụng Claude AI</div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 8 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&h=200&q=80" alt="Bùi Quang Huy" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Khóa học Java giúp mình tự tin đi phỏng vấn xin việc. Các chương trình học tại trung tâm vô cùng thực chiến, nội dung chất lượng sát thực tế công ty phần mềm. Giáo viên tận tâm, cơ sở vật chất quá tốt!"
+              </p>
+              <h5 class="testimonial-author">Bùi Quang Huy</h5>
+              <div class="testimonial-course">Học viên Khóa Lập Trình Java Web</div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 9 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&h=200&q=80" alt="Hoàng Mỹ Duyên" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Sau khóa Excel nâng cao mình làm báo cáo cực kỳ nhanh. Các chương trình học tại trung tâm quá tuyệt vời, nội dung chất lượng sát thực tế công việc kế toán. Giáo viên tận tâm và cơ sở vật chất quá tốt!"
+              </p>
+              <h5 class="testimonial-author">Hoàng Mỹ Duyên</h5>
+              <div class="testimonial-course">Học viên Khóa MOS Excel Nâng Cao</div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 10 -->
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200&q=80" alt="Phan Quốc Bảo" class="testimonial-avatar">
+              </div>
+              <div class="testimonial-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Đã trải nghiệm nhiều nơi nhưng TECHEDU làm mình hài lòng nhất. Các chương trình học tại trung tâm cập nhật công nghệ mới nhất, nội dung chất lượng sát thực tế, giáo viên tận tâm và cơ sở vật chất quá tốt. 10/10!"
+              </p>
+              <h5 class="testimonial-author">Phan Quốc Bảo</h5>
+              <div class="testimonial-course">Học viên Khóa Lập Trình & AI Agent</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Buttons Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Trước</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Sau</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ĐỊA CHỈ LIÊN HỆ & GOOGLE MAP SECTION -->
+  <section class="contact-map-section" id="contact-map">
+    <div class="container">
+      <div class="text-center mx-auto mb-5" style="max-width: 750px;">
+        <span class="badge-soft mb-2"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Trụ Sở Trung Tâm</span>
+        <h2 class="display-6 fw-bold text-custom-primary">Địa Chỉ Liên Hệ & Bản Đồ</h2>
+        <p class="text-custom-muted">Ghé thăm trực tiếp Trung tâm Tin học TECHEDU hoặc liên hệ với chúng tôi để nhận hỗ trợ tốt nhất.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Bên trái là Địa chỉ -->
+        <div class="col-lg-5">
+          <div class="contact-info-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="brand-icon" style="width: 50px; height: 50px; font-size: 1.5rem;">
+                  <i class="bi bi-geo-alt-fill text-warning"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold text-custom-primary mb-0">Địa Chỉ Trung Tâm</h4>
+                  <small class="text-muted">Trung Tâm Đào Tạo Tin Học TECHEDU</small>
+                </div>
+              </div>
+
+              <div class="p-3 bg-white rounded-3 border mb-4 shadow-sm">
+                <div class="d-flex align-items-start gap-3">
+                  <i class="bi bi-pin-map-fill fs-3 text-danger mt-1"></i>
+                  <div>
+                    <h6 class="fw-bold text-custom-primary mb-1">Địa chỉ trụ sở chính:</h6>
+                    <p class="fw-semibold fs-5 text-custom-primary mb-0" style="line-height: 1.4;">
+                      34 Hoàng Việt, Phường Tân Sơn Nhất, TP. Hồ Chí Minh
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="list-unstyled text-custom-primary mb-4">
+                <li class="mb-3 d-flex align-items-center gap-3">
+                  <div class="btn btn-sm btn-outline-primary rounded-circle p-2" style="width: 36px; height: 36px;"><i class="bi bi-telephone-fill"></i></div>
+                  <div>
+                    <small class="text-muted d-block">Hotline / Zalo Tư Vấn:</small>
+                    <strong class="fs-6"><a href="tel:0383857888" class="text-custom-primary">0383857888</a></strong>
+                  </div>
+                </li>
+                <li class="mb-3 d-flex align-items-center gap-3">
+                  <div class="btn btn-sm btn-outline-info rounded-circle p-2" style="width: 36px; height: 36px;"><i class="bi bi-envelope-fill"></i></div>
+                  <div>
+                    <small class="text-muted d-block">Email Liên Hệ:</small>
+                    <strong class="fs-6"><a href="mailto:tuyensinh@finviet.com.vn" class="text-custom-primary">tuyensinh@finviet.com.vn</a></strong>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center gap-3">
+                  <div class="btn btn-sm btn-outline-success rounded-circle p-2" style="width: 36px; height: 36px;"><i class="bi bi-clock-fill"></i></div>
+                  <div>
+                    <small class="text-muted d-block">Thời gian mở cửa:</small>
+                    <strong class="fs-6">Thứ 2 - Chủ Nhật (08:00 - 21:00)</strong>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-3 border-top">
+              <button class="btn btn-custom-primary w-100 fw-bold py-2" data-bs-toggle="modal" data-bs-target="#registerModal">
+                <i class="bi bi-calendar-check me-2"></i> Đặt Lịch Hẹn Tư Vấn Trực Tiếp
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bên phải là iframe Google Map -->
+        <div class="col-lg-7">
+          <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2226304658784!2d106.65575421092689!3d10.794253589311262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529347e3fc833%3A0x12d69c7ee94def97!2zMzQgSG_DoG5nIFZp4buHdCwgVMOibiBTxqFuIE5o4bqldCwgSOG7kyBDaMOtIE1pbmggNzAwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1789972754569!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Footer -->
+  <footer class="footer-custom" id="contact">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <!-- Cột 1: Thông tin Trung tâm -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="brand-icon">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <span class="footer-brand">TIN HỌC TECHEDU</span>
+          </div>
+          <p class="small opacity-75 mb-3">
+            Trung tâm đào tạo tin học ứng dụng và công nghệ hàng đầu. Chuyên đào tạo luyện thi chứng chỉ MOS quốc tế, Lập trình Java thực chiến và Ứng dụng AI đột phá giúp nâng cao hiệu suất công việc.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com" target="_blank" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank" class="btn btn-sm btn-outline-light rounded-circle" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://tiktok.com" target="_blank" class="btn btn-sm btn-outline-light rounded-circle" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://zalo.me/0383857888" target="_blank" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Zalo"><i class="bi bi-chat-dots-fill"></i></a>
+          </div>
+        </div>
+
+        <!-- Cột 2: Các Khóa Học -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Khóa Học Đào Tạo</h5>
+          <ul class="footer-links">
+            <li><a href="ai-course.html"><i class="bi bi-chevron-right me-1"></i> Khóa học Ứng dụng AI</a></li>
+            <li><a href="mos-ai.html"><i class="bi bi-chevron-right me-1"></i> Khóa học Luyện thi MOS Word</a></li>
+            <li><a href="mos-ai.html"><i class="bi bi-chevron-right me-1"></i> Khóa học MOS Excel nâng cao</a></li>
+            <li><a href="mos-ai.html"><i class="bi bi-chevron-right me-1"></i> Combo MOS 3 Môn Quốc Tế</a></li>
+            <li><a href="index.html#featured-courses"><i class="bi bi-chevron-right me-1"></i> Lập trình Java Web Thực Chiến</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Thông Tin Liên Hệ -->
+        <div class="col-lg-5 col-md-12">
+          <h5 class="footer-title">Thông Tin Liên Hệ</h5>
+          <ul class="list-unstyled small opacity-90">
+            <li class="mb-3 d-flex align-items-start gap-2">
+              <i class="bi bi-geo-alt-fill text-warning fs-5"></i>
+              <span><strong>Địa chỉ:</strong> 34 Hoàng Việt, Phường Tân Sơn Nhất, TP. Hồ Chí Minh.</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-telephone-fill text-success fs-5"></i>
+              <span><strong>Hotline / Zalo:</strong> <a href="tel:0383857888" class="text-white text-decoration-underline">0383857888</a></span>
+            </li>
+            <li class="mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-envelope-fill text-info fs-5"></i>
+              <span><strong>Email:</strong> <a href="mailto:tuyensinh@finviet.com.vn" class="text-white text-decoration-underline">tuyensinh@finviet.com.vn</a></span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-clock-fill text-danger fs-5"></i>
+              <span><strong>Giờ làm việc:</strong> Thứ 2 - Chủ Nhật (08:00 - 21:00)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright -->
+      <div class="footer-bottom text-center">
+        <p class="mb-0 opacity-75">&copy; 2026 Trung Tâm Tin Học TECHEDU. All Rights Reserved. Thiết kế giao diện cao cấp cho học viên tin học.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Registration Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+        <div class="modal-header bg-custom-primary text-white border-0" style="border-radius: 16px 16px 0 0;">
+          <h5 class="modal-header-title mb-0 fw-bold" id="registerModalLabel">
+            <i class="bi bi-card-checklist me-2"></i> Đăng Ký Tư Vấn Khóa Học
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="small text-muted mb-3">Vui lòng điền thông tin bên dưới, tư vấn viên sẽ liên hệ lại với bạn trong vòng 15 phút!</p>
+          <form onsubmit="handleFormSubmit(event, 'registerModal')">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Họ và tên *</label>
+              <input type="text" class="form-control" placeholder="Nguyễn Văn A" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Số điện thoại / Zalo *</label>
+              <input type="tel" class="form-control" placeholder="0383857888" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Email</label>
+              <input type="email" class="form-control" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Khóa học bạn quan tâm *</label>
+              <select class="form-select" required>
+                <option value="ai">Khóa học Ứng Dụng AI (4.000.000 VNĐ)</option>
+                <option value="mos-combo2">Khóa học MOS Combo 2 môn (1.000.000 VNĐ)</option>
+                <option value="mos-combo3">Khóa học MOS Combo 3 môn (1.500.000 VNĐ)</option>
+                <option value="java">Lập Trình Java Thực Chiến (3.500.000 VNĐ)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-custom-primary w-100 fw-bold py-2">
+              <i class="bi bi-check-circle-fill me-1"></i> XÁC NHẬN ĐĂNG KÝ
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+    <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="bi bi-check-circle-fill me-2"></i> Đăng ký thông tin thành công! Trung tâm sẽ gọi điện tư vấn cho bạn ngay.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    function handleFormSubmit(event, modalId = null) {
+      event.preventDefault();
+      if (modalId) {
+        const modalEl = document.getElementById(modalId);
+        const modalInstance = bootstrap.Modal.getInstance(modalEl);
+        if (modalInstance) modalInstance.hide();
+      }
+      const toastEl = document.getElementById('successToast');
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
